@@ -5,17 +5,16 @@
 Code for the paper [Explainable Prediction of Medical Codes from Clinical Text](https://arxiv.org/abs/1802.05695).
 
 ## Dependencies
-* Python 3.6, though 2.7 should hopefully work as well
-* pytorch 0.3.0
-* tqdm
-* scikit-learn 0.19.1
-* numpy 1.13.3, scipy 0.19.1, pandas 0.20.3
+* Python 3.6.10
+* pytorch 1.3.1
+* tqdm (4.59.0)
+* scikit-learn 0.24.1
+* numpy 1.19.2, scipy 1.5.2, pandas 1.1.5
 * jupyter-notebook 5.0.0
-* gensim 3.2.0
-* nltk 3.2.4
+* gensim 3.8.3
+* nltk 3.5
 
 Other versions may also work, but the ones listed are the ones I've used
-
 
 ## Data processing
 
@@ -46,7 +45,13 @@ To directly reproduce the results of the paper, first run the data processing st
 
 ## Training a new model
 
-To train a new model from scratch, please use the script `learn/training.py`. Execute `python training.py -h` for a full list of input arguments and flags. The `train_new_model.sh` scripts in the `predictions/` subdirectories can serve as examples (or you can run those directly to use the same hyperparameters).
+1. To train a new model from scratch, please copy the script `learn/training.py` to the project root directory.
+
+    ```
+    cp learn/training.py training.py
+    ```
+
+2. Execute `python training.py -h` for a full list of input arguments and flags. The `train_new_model.sh` scripts in the `predictions/` subdirectories can serve as examples (or you can run those directly to use the same hyperparameters).
 
 ## Model predictions
 
